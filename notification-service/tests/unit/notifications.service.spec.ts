@@ -77,7 +77,7 @@ describe("Notificaciones (unitarias, con mocks)", () => {
       await scheduler.remindUpcomingClasses();
 
       const refs = notifications.notifyUser.mock.calls.map((c) => c[3]);
-      expect(refs).toEqual(["class_reminder-b-ok-est-1", "class_reminder-b-ok-tutor-user-1"]);
+      expect(refs).toEqual(["class_reminder-1h-b-ok-est-1","class_reminder-1h-b-ok-tutor-user-1",]);
       expect(notifications.notifyUser.mock.calls[0][1]).toBe("class_reminder");
     });
   });
